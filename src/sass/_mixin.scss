@@ -1,0 +1,19 @@
+/* ==================
+  真ん中に揃えるためのmixin
+===================== */
+@mixin flex($justifyContent: center) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==================
+  ハンバーガーの線の部分
+===================== */
+@mixin trigger($backgroundColor: #fff) {
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 100px;
+  background: $backgroundColor;
+}

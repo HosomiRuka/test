@@ -1,0 +1,53 @@
+doctype html
+html(lang="ja")
+    head
+        include _temp_head
+        link(rel="stylesheet" href="/css/style.css")
+    body
+        header.header__box
+            header.header
+                .header__logo
+                    img(src="./img/sample.svg", alt="")  
+                ul.header__list
+                    li 
+                        a(href="https://github.com/HosomiRuka" target="_blank")  
+                            img(src="./img/github.svg", alt="") 
+                    li 
+                        a(href="https://twitter.com/ruka__311" target="_blank") 
+                            img(src="./img/twitter.svg", alt="")  
+
+        main.main 
+            //- 1列目
+            .main__box--1 
+                .main__box--1--trigger--normal
+                    span 
+            .main__box--2 
+                .main__box--1--trigger--rotate
+                    span 
+            .main__box--1 
+            .main__box--2 
+            .main__box--1
+
+            //- 2列目
+            .main__box--2
+            .main__box--1
+            .main__box--2
+            .main__box--1
+            .main__box--2
+
+            //- 3列目
+            .main__box--1 
+            .main__box--2 
+            .main__box--1 
+            .main__box--2 
+            .main__box--1
+                
+             //- 4列目
+            .main__box--2
+            .main__box--1
+            .main__box--2
+            .main__box--1
+            .main__box--2
+
+        include  _temp_foot
+        

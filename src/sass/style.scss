@@ -1,0 +1,95 @@
+@import "ress";
+@import "vars";
+@import "common";
+@import "breakpoint";
+@import "mixin";
+
+/* ==================
+このコメントの書き方好き
+===================== */
+body {
+  // background: #fffbf0;
+}
+
+/* ==================
+header部分
+===================== */
+.header__box {
+  width: 100%;
+  height: 8rem;
+  // background: #fff;
+  .header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 8rem;
+    background: #fff;
+    z-index: 10;
+    &__logo {
+      position: absolute;
+      left: 2rem;
+    }
+    &__list {
+      position: absolute;
+      @include flex;
+      right: 0;
+      li {
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  top: 8rem;
+  &__box--1 {
+    @include flex;
+    width: calc(100% / 5);
+    height: calc(100vh / 3);
+    background: #fca06d;
+    ///////////*ハンバーガーメニュー*////////////
+    &--trigger--normal {
+      width: 50px;
+      height: 35px;
+      cursor: pointer;
+      span {
+        @include trigger;
+        margin: 1rem 0; /*border同士の縦の余白*/
+      }
+      &::before {
+        content: "";
+        @include trigger;
+      }
+      &::after {
+        content: "";
+        @include trigger;
+      }
+    }
+  }
+
+  &__box--2 {
+    @include flex;
+    width: calc(100% / 5); /*背景boxの横幅、常に親の大きさに沿う*/
+    height: calc(100vh / 3);
+    background: #ffc98a;
+  }
+}
+
+/* ==================
+footer
+===================== */
+footer {
+  @include flex;
+  width: 100%;
+  height: 4rem;
+}
+
+/* ==================
+SP版
+===================== */
+@include sp {
+}
